@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/index.css"],
+  "sourcesContent": ["@font-face {\n font-family: 'JoystixMono';\n src: url('assets/joystix_mono.otf') format('opentype');\n}\n\nbody, html {\n  margin: 0;\n  background-color: #fff6f4;\n  color: dodgerblue;\n}\n\n.container {\n  padding: 30px;\n}\n\n.fixed {\n  position: fixed;\n  top: 0;\n  left: 0;\n}\n\n.full-screen {\n  width: 100vw;\n  height: 100vh;\n}\n\n.background {\n  z-index: -100;\n}\n\ncanvas {\n  width: 100%;\n  height: 100%;\n}\n\nh1 {\n  font-family: 'JoystixMono';\n}\n"],
+  "mappings": "AAAA,WACC,YAAa,YACb,IAAK,mCAA+B,OAAO,WAC5C,CAEA,KAAM,KALN,OAMU,EACR,iBAAkB,QAClB,MAAO,OACT,CAEA,CAAC,UAXD,QAYW,IACX,CAEA,CAAC,MACC,SAAU,MACV,IAAK,EACL,KAAM,CACR,CAEA,CAAC,YACC,MAAO,MACP,OAAQ,KACV,CAEA,CAAC,WACC,QAAS,IACX,CAEA,OACE,MAAO,KACP,OAAQ,IACV,CAEA,GACE,YAAa,WACf",
+  "names": []
+}
