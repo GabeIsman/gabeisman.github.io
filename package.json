@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "esbuild src/index.html src/index.ts src/index.css --bundle --outdir=build --loader:.html=copy",
-    "dev": "esbuild src/index.html src/index.ts src/index.css --outdir=build --watch --servedir=build --serve --loader:.html=copy",
+    "dev": "esbuild src/index.html src/index.ts src/index.css --bundle --outdir=build --watch --servedir=build --serve --loader:.html=copy",
     "dist": "esbuild src/index.html src/index.ts --bundle --minify --sourcemap --outdir=dist --target=chrome58,firefox57,safari11,edge16 --loader:.html=copy",
-    "clean": "rm dist/* build/*"
   },
   "author": "",
   "license": "ISC",
