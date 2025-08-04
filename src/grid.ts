@@ -1,4 +1,5 @@
 import "./types";
+import Matrix from "./matrix";
 
 export default class Grid implements Drawable {
   dimensions: Point;
@@ -42,10 +43,10 @@ export default class Grid implements Drawable {
     return this.neighboringValues(point).reduce((sum, value) => sum + value, 0);
   }
 
-  placePattern(pattern: Array<Array<number>>, point: Point) {
-    for (let y = 0; y < pattern.length; y++) {
-      for (let x = 0; x < pattern[y].length; x++) {
-        this.setValue({ x: point.x + x, y: point.y + y }, pattern[y][x]);
+  placePattern(pattern: Matrix, point: Point) {
+    for (let y = 0; y < pattern.data.length; y++) {
+      for (let x = 0; x < pattern.data[y].length; x++) {
+        this.setValue({ x: point.x + x, y: point.y + y }, pattern.data[y][x]);
       }
     }
   }

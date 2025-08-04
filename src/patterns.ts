@@ -1,30 +1,32 @@
-export const BLINKER = [
-  [0, 1, 0],
-  [0, 1, 0],
-  [0, 1, 0],
-];
+import Matrix from "./matrix.ts";
 
-export const GLIDER = [
+export const BLINKER = new Matrix([
+  [0, 1, 0],
+  [0, 1, 0],
+  [0, 1, 0],
+]);
+
+export const GLIDER = new Matrix([
   [0, 0, 1],
   [1, 0, 1],
   [0, 1, 1],
-];
+]);
 
-export const ACORN = [
+export const ACORN = new Matrix([
   [0, 1, 0, 0, 0, 0, 0],
   [0, 0, 0, 1, 0, 0, 0],
   [1, 1, 0, 0, 1, 1, 1],
-];
+]);
 
-export const BLOCK_ENGINE = [
+export const BLOCK_ENGINE = new Matrix([
   [1, 1, 1, 0, 1],
   [1, 0, 0, 0, 0],
   [0, 0, 0, 1, 1],
   [0, 1, 1, 0, 1],
   [1, 0, 1, 0, 1],
-];
+]);
 
-export const GLIDER_GUN = [
+export const GLIDER_GUN = new Matrix([
   [0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 1, 1, 0, 0, 0, 0],
   [0, 0, 0, 1, 1, 0, 0, 0, 0],
@@ -62,4 +64,4 @@ export const GLIDER_GUN = [
   [0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 1, 1, 0, 0],
   [0, 0, 0, 0, 0, 1, 1, 0, 0],
-];
+]);

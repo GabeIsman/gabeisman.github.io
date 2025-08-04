@@ -37,6 +37,10 @@ export default class Game {
   start() {
     this.grid.placePattern(BLOCK_ENGINE, { x: 300, y: 200 });
     this.grid.placePattern(GLIDER_GUN, { x: 500, y: 100 });
+    this.grid.placePattern(GLIDER_GUN.transpose(), {
+      x: 400,
+      y: 10,
+    });
     this.grid.placePattern(ACORN, { x: 100, y: 200 });
     this.tick();
   }

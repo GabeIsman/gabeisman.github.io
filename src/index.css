@@ -15,17 +15,25 @@ body, html {
 
 .fixed {
   position: fixed;
-  top: 0;
-  left: 0;
 }
 
-.full-screen {
-  width: 100vw;
-  height: 100vh;
+.overlay {
+  z-index: 100;
 }
 
 .background {
   z-index: -100;
+}
+
+.full-screen {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.non-interactive {
+  pointer-events: none;
 }
 
 canvas {
