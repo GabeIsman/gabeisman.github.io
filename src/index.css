@@ -6,11 +6,17 @@
 body, html {
   margin: 0;
   background-color: #fff6f4;
-  color: dodgerblue;
+  --color: dodgerblue;
+  --font: 'JoystixMono';
 }
 
 .container {
+  display: flex;
   padding: 30px;
+  flex-direction: column;
+  justify-content: space-between;
+
+  color: var(--color);
 }
 
 .fixed {
@@ -30,6 +36,7 @@ body, html {
   left: 0;
   width: 100vw;
   height: 100vh;
+  box-sizing: border-box;
 }
 
 .non-interactive {
@@ -42,5 +49,30 @@ canvas {
 }
 
 h1 {
-  font-family: 'JoystixMono';
+  font-family: var(--font);
+  font-size: 50px;
+  margin-top: 0;
+}
+
+nav {
+  ul {
+    list-style: none;
+    padding-left: 10px;
+  }
+
+  li {
+    color: var(--color);
+    font-family: var(--font);
+    font-size: 20px;
+  }
+
+  a, a:hover, a:visited {
+    display: inline-block;
+    color: var(--color);
+    text-decoration: none;
+    padding: 5px 0;
+  }
+}
+
+@media (max-width: 768px) {
 }

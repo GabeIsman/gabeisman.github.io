@@ -4,9 +4,9 @@
   "description": "A personal site.",
   "main": "index.js",
   "scripts": {
-    "build": "esbuild src/index.html src/index.ts src/index.css --bundle --outdir=build --loader:.html=copy --loader:.otf=copy",
-    "dev": "esbuild src/index.html src/index.ts src/index.css --bundle --outdir=build --watch --servedir=build --serve --loader:.html=copy --loader:.otf=copy",
-    "dist": "esbuild src/index.html src/index.ts src/index.css --bundle --minify --sourcemap --outdir=dist --target=chrome58,firefox57,safari11,edge16 --loader:.html=copy --loader:.otf=copy"
+    "build": "esbuild src/index.html src/index.ts src/index.css src/assets/* --bundle --outdir=build --loader:.html=copy --loader:.otf=copy --loader:.pdf=copy",
+    "dev": "esbuild src/index.html src/index.ts src/index.css src/assets/* --bundle --outdir=build --watch --servedir=build --serve --loader:.html=copy --loader:.otf=copy --loader:.pdf=copy",
+    "dist": "esbuild src/index.html src/index.ts src/index.css src/assets/* --bundle --minify --sourcemap --outdir=dist --target=chrome58,firefox57,safari11,edge16 --loader:.html=copy --loader:.otf=copy --loader:.pdf=copy"
   },
   "author": "",
   "license": "ISC",

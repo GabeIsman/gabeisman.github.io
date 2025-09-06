@@ -62,7 +62,7 @@ export default class Grid implements Drawable {
     this.dimensions = dimensions;
     const oldGrid = structuredClone(this.grid);
     this.resetGrid();
-    this.placePattern(oldGrid, { x: 0, y: 0 });
+    this.placePattern(new Matrix(oldGrid), { x: 0, y: 0 });
   }
 
   getValue(point: Point) {
