@@ -5,7 +5,7 @@ export default class Canvas {
   context: CanvasRenderingContext2D;
   gridSize: number;
 
-  constructor(canvas: HTMLCanvasElement, fullScreen = true) {
+  constructor(canvas: HTMLCanvasElement) {
     const context = canvas.getContext("2d");
 
     if (!context) {
@@ -14,11 +14,6 @@ export default class Canvas {
 
     this.context = context;
     this.canvas = canvas;
-
-    if (fullScreen) {
-      window.addEventListener("resize", () => this.resizeCanvas());
-      this.resizeCanvas();
-    }
   }
 
   draw(drawable: Drawable, point: Point, color: string) {
@@ -32,7 +27,7 @@ export default class Canvas {
     this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
   }
 
-  private resizeCanvas() {
+  sizeToScreen() {
     this.canvas.width = window.innerWidth;
     this.canvas.height = window.innerHeight;
   }

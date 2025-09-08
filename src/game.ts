@@ -1,5 +1,6 @@
 import Canvas from "./canvas.ts";
 import Grid from "./grid.ts";
+import { debounce } from "./utilities.ts";
 import {
   ACORN,
   BLOCK_ENGINE,
@@ -26,12 +27,11 @@ export default class Game {
 
     this.cellSize = cellSize;
     this.canvas = canvas;
+    this.canvas.sizeToScreen();
     this.lastTick = 0;
     this.grid = new Grid(this.gridDimensions(), this.cellSize);
     this.tickSpeed = tickSpeed;
-    window.addEventListener("resize", () =>
-      this.grid.resize(this.gridDimensions())
-    );
+    window.addEventListener("resize", debounce(this.handleResize, 300));
   }
 
   start() {
@@ -82,4 +82,9 @@ export default class Game {
       y: Math.ceil(window.innerHeight / this.cellSize),
     };
   }
+
+  private handleResize = () => {
+    this.grid.resize(this.gridDimensions());
+    this.canvas.sizeToScreen();
+  };
 }

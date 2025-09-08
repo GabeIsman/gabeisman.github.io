@@ -8,12 +8,14 @@ body, html {
   background-color: #fff6f4;
   --color: dodgerblue;
   --font: 'JoystixMono';
+  height: 100%;
 }
 
 .container {
+  height: 100%;
   display: flex;
   padding: 30px;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
@@ -73,15 +75,5 @@ nav {
     color: var(--color);
     text-decoration: none;
     padding: 5px 0;
-  }
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 75px;
-  }
-
-  li {
-    font-size: 30px;
   }
 }
